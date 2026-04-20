@@ -1947,7 +1947,7 @@ int freadMain(freadMainArgs _args)
           }
         }
       }
-      if (topSkip > 1 && !skipEmptyLines)
+      if (!prevStart && topSkip > 1 && !skipEmptyLines)
       {
         DTWARN(_("The rows in this file appear to be separated by blank lines. This resulted in most rows being skipped. If this was not the intended outcome, please consider setting 'blank.lines.skip' to TRUE.\n"));
       }
