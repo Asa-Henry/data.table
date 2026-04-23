@@ -8074,7 +8074,7 @@ test(1578.7, fread(f, skip=49L), data.table(V1=1:2, V2=3:4))
 test(1578.8, fread(f, skip=47L, blank.lines.skip=TRUE), data.table(a=1:2, b=3:4))
 test(1578.9, fread(f, skip=48L), data.table(V1=1:2, V2=3:4))  # start on blank line 49 and skip="auto" to first data row on line 50
 input = "x y\n\n1 a\n\n2 b\n\n3 c"
-test(1578.91, fread(input), data.table(V1=3L, V2="c"), warning="The rows in this file appear to be separated by blank lines. This resulted in most rows being skipped. If this was not the intended outcome, please consider setting 'blank.lines.skip' to TRUE.\n")
+test(1578.91, fread(input), data.table(V1=3L, V2="c"), warning="The rows in this file appear to be separated by blank lines. This resulted in most rows being skipped. If this was not the intended outcome, please consider setting 'blank.lines.skip' to TRUE.")
 
 # test 1579 moved to optimize.Rraw
 
